@@ -1,10 +1,10 @@
-# AI & Python Development Megaclass
+# AI & Python Development
 
 > A public record of my journey in Python programming, Data Science, Machine Learning, Deep Learning, Artificial Intelligence, and software development.
 
 ## About This Repository
 
-This repository contains my daily progress while completing the **AI & Python Development Megaclass**. I will regularly upload:
+This repository contains my daily progress while completing the **AI & Python Development **. I will regularly upload:
 
 * Daily Python practice programs
 * Notes and explanations
@@ -202,7 +202,7 @@ AI-Python-Megaclass/
 
 | Module              | Status |
 | ------------------- | ------ |
-| Python Fundamentals | ⬜      |
+| Python Fundamentals | 🟧     |
 | Data Science        | ⬜      |
 | Mathematics for ML  | ⬜      |
 | Statistics          | ⬜      |

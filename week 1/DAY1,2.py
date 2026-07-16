@@ -21,3 +21,5 @@
 import math  # u can import whole module using 
 
 from math import sqrt # for importing  specfic function from the module 
+import math as m # math as m 
+print(m.sqrt(16))

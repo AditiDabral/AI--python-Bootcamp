@@ -5,8 +5,8 @@ import os
 File_name = "task.txt"
 
 #load task from file
-def load_tasks():
-    tasks ={}
+def load_tasks():   #file--> dictionary
+    tasks ={}                     
     if os.path.exists(File_name): # check file exists
         with open(File_name, "r") as file:
             for line in file :
@@ -15,7 +15,7 @@ def load_tasks():
     return tasks
 
 # save task to file
-def save_tasks(tasks):
+def save_tasks(tasks):      #dictionary ---->file
     with open(File_name, "w") as file:
         for task_id, task in tasks.items():
             file.write(f"{task_id} | {task['title']} | {task['status']}\n")
@@ -52,6 +52,20 @@ def delete_task(tasks):
         print(f"Task '{deleted_task['title']}'deleted.")
     else:
         print("Task ID not found.")
+        
+        
+def search_task(tasks):
+    word = input("Search task : ").lower()
+
+    found = False
+
+    for task_id, task in tasks.items():
+        if word in task["title"].lower():
+            print(f"{task_id}. {task['title']} - {task['status']}")
+            found = True
+
+    if not found:
+        print("No task found.")
 
 #Main Menu
 def main():
@@ -59,10 +73,11 @@ def main():
     while True:
         print("\nTask Manager Menu:")
         print("1.ADD Task")
-        print("2. View Task")
+        print("2. View Task")   
         print("3. Mark Task as complted")
         print("4. Delete Task")
-        print("5. Exit")
+        print("5. Search a Task")
+        print("6. Exit")
         
         choice = input("Enter your choice : ")
         
@@ -74,7 +89,9 @@ def main():
             mark_task_complete(tasks)
         elif choice == "4" :
             delete_task(tasks)
-        elif choice == "5":
+        elif choice =="5":
+            search_task(tasks)
+        elif choice == "6":
             save_tasks(tasks)
             print("GoodBye!!")
             break
@@ -82,4 +99,4 @@ def main():
             print("Inavlid Choice . Please try again !!")
 
 if __name__ == "__main__":
-    main()            
+    main()            #Run main() ONLY if this file is being executed directly. If someone imports me, don't start the program.

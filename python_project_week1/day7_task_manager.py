@@ -1,10 +1,11 @@
 import os
 
-#file to store task
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-File_name = "task.txt"
+File_name = os.path.join(BASE_DIR, "task.txt")
 
-#load task from file
+#load task from file6
+
 def load_tasks():   #file--> dictionary
     tasks ={}                     
     if os.path.exists(File_name): # check file exists
@@ -15,7 +16,7 @@ def load_tasks():   #file--> dictionary
     return tasks
 
 # save task to file
-def save_tasks(tasks):      #dictionary ---->file
+def save_tasks(tasks):     #dictionary ---->file
     with open(File_name, "w") as file:
         for task_id, task in tasks.items():
             file.write(f"{task_id} | {task['title']} | {task['status']}\n")
@@ -99,4 +100,6 @@ def main():
             print("Inavlid Choice . Please try again !!")
 
 if __name__ == "__main__":
-    main()            #Run main() ONLY if this file is being executed directly. If someone imports me, don't start the program.
+    main()            
+#Run main() ONLY if this file is being executed directly. If someone imports me, don't start the program.
+

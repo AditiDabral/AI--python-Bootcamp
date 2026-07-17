@@ -1,0 +1,47 @@
+#expression for item in iterable if condition
+
+#create a list if square
+sq = [x**2 for x in range(10)]
+print(sq)
+
+# filter odd number
+odd = [x for x in range(100) if x%2 !=0]
+print(odd)
+
+## lambda function / anoymunus function : u dont have to give a name to function
+#lambda arguments : expression   
+
+add = lambda x, y : x+ y  # here x and y are the arguments and x+y is a code inside a function or expression 
+print(add(2,5))
+
+
+
+#map() : apply function to each items in an iterable 
+numbers =[3,56,3,84]
+squares = map(lambda x: x**2, numbers)
+print(list(squares))
+
+#filter() : filters items based on condition
+evenList = filter(lambda x : x % 2 ==0, numbers)
+print(list(evenList))
+
+#reduce(): reduce an iterable to a single value /number
+
+from functools import reduce
+
+product = reduce(lambda x ,y:x*y , numbers)
+print(product)
+
+####### python os and sys module ####
+# os module : provide functions to interact with operating system
+
+# import os
+# print(os.getcwd) # current working directory u are in
+# os.mkdir("test_dir") # create a new  directory)
+# os.remove("file.txt")
+
+## sys Module : provide acess to system-specfic parameters and functions
+
+import sys
+print(sys.argy)  # give the command line arguments
+print(sys.version)  # give the version ex python version

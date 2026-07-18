@@ -1,3 +1,4 @@
+#Python library used for scientific computing and working with large, multi-dimensional arrays and matrices.
 import numpy as np
 
  # creating arrays

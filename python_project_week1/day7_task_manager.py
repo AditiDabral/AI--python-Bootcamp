@@ -1,9 +1,11 @@
+print(open)
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 File_name = os.path.join(BASE_DIR, "task.txt")
 
+print("BASE DIR:", BASE_DIR)
+print("FILE PATH:", File_name)
 #load task from file6
 
 def load_tasks():   #file--> dictionary
@@ -16,10 +18,13 @@ def load_tasks():   #file--> dictionary
     return tasks
 
 # save task to file
-def save_tasks(tasks):     #dictionary ---->file
+def save_tasks(tasks):
     with open(File_name, "w") as file:
         for task_id, task in tasks.items():
-            file.write(f"{task_id} | {task['title']} | {task['status']}\n")
+            try:
+                file.write(f"{task_id} | {task['title']} | {task['status']}\n")
+            except Exception as e:
+                print("WRITE ERROR:", e)
             
 # add a new task
 def add_task(tasks):

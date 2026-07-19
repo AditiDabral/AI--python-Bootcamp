@@ -15,7 +15,7 @@ import pandas as pd
 # df["column_name"] = df["column_name"].interpolate()  # fill by add similar data
 
  #data transformation: renaiming column , changing data type ,  creating & modifying column 
- 
+df = [3,6,127]
 df = df.rename(columns ={"old_name": "new_name"})
 
 df["coulmn_name"] = df["column_name"].astype("float")
@@ -26,6 +26,8 @@ df["new_column"] = df["existing_coulmn"] * 2 # create a new column annd modify b
 
 # Combing and merging data frames : ex = u have data of diff years , u want to compare them or combine them by using : concatenation , Merging , Joining 
 
+df1 =[4,6,8]
+df2 =[5,6.0,3]
 combined = pd.concat([df1 , df2], axis=0) # combing two data frames along  rows
 combined = pd.concat([df1 , df2], axis=1) # combing two data frames(df1 &df2) along  column
 

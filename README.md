@@ -203,8 +203,8 @@ AI-Python-Megaclass/
 | Module              | Status |
 | ------------------- | ------ |
 | Python Fundamentals | 🟩    |
-| Data Science        | 🟧      |
-| Mathematics for ML  | ⬜      |
+| Data Science   essential     🟩     |
+| Mathematics for ML  | 🟧       |
 | Statistics          | ⬜      |
 | Machine Learning    | ⬜      |
 | Feature Engineering | ⬜      |

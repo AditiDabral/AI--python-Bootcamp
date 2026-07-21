@@ -203,7 +203,7 @@ AI-Python-Megaclass/
 | Module              | Status |
 | ------------------- | ------ |
 | Python Fundamentals | 🟩    |
-| Data Science   essential     🟩     |
+| Data Science   essential|   🟩     |
 | Mathematics for ML  | 🟧       |
 | Statistics          | ⬜      |
 | Machine Learning    | ⬜      |
@@ -218,21 +218,7 @@ AI-Python-Megaclass/
 
 > ⬜ Not Started
 > 🟨 In Progress
-> ✅ Completed
-
----
-
-## Commit Convention
-
-Examples:
-
-* Day 01: Completed Python Variables & Data Types
-* Day 15: Finished NumPy Basics
-* Week 05: Implemented Logistic Regression
-* Project: Built Weather Dashboard
-* Added Notes for Transformers Architecture
-
----
+> 🟩 Completed 
 
 ## Goals
 
@@ -244,5 +230,3 @@ Examples:
 * Continuously improve through hands-on implementation.
 
 ---
-
-### "Consistency compounds. Every small commit is progress."
